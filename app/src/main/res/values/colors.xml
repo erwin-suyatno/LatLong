@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="bgcolor">#F0F5FF</color>
+    <color name="btngps">#32328A</color>
+    <color name="textcolor">#1B1E23</color>
+    <color name="textputih">#FDFBF9</color>
+    <color name="bgrutebtn">#0FA958</color>
 </resources>

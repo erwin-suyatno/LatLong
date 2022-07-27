@@ -4,118 +4,183 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
+    android:background="@color/bgcolor"
     tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/locationButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get Current Location"
-        android:textAllCaps="false"
-        android:textSize="19sp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtLat"
-        app:layout_constraintVertical_bias="0.039" />
-
-    <Button
-        android:id="@+id/bt_submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get Current Destination"
-        android:textAllCaps="false"
-        android:textSize="19sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtLat"
-        app:layout_constraintVertical_bias="0.326" />
-
-    <Button
-        android:id="@+id/btnKirim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kirim Lacur"
-        android:textAllCaps="false"
-        android:textSize="19sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.395"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtLat"
-        app:layout_constraintVertical_bias="0.803" />
-
-    <EditText
-        android:id="@+id/edtLat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="LatAwal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.189" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/edtLong"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="LongAwal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.103" />
 
-    <EditText
-        android:id="@+id/et_place"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.403" />
+        <TextView
+            android:id="@+id/tv_myloc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lokasi Anda Sekarang"
+            android:textAlignment="center"
+            android:textColor="@color/textcolor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.046" />
 
-    <EditText
-        android:id="@+id/etlongAkhir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="LongAkhir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62" />
+        <TextView
+            android:id="@+id/tv_myloc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="132dp"
+            android:text="Tentukan Destinasi Anda"
+            android:textAlignment="center"
+            android:textColor="@color/textcolor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/et_place"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtLong"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/etlatAkhir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="184dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="LatAkhir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.417"
-        app:layout_constraintStart_toStartOf="parent" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnKirim"
+            android:layout_width="345dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="155dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/buttonrute"
+            android:text="Tampilkan Rute Jalan"
+            android:textColor="@color/textcolor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_submit" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/locationButton"
+            android:layout_width="345dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/buttonmasuk"
+            android:text="Dapatkan Koordinat Titik Awal"
+            android:textColor="@color/textputih"
+            app:layout_constraintBottom_toTopOf="@+id/tv_myloc2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtLong"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_submit"
+            android:layout_width="345dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="252dp"
+            android:background="@drawable/buttonmasuk"
+            android:text="Dapatkan Koordinat Titik Akhir"
+            android:textColor="@color/textputih"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtLong" />
+
+        <EditText
+            android:id="@+id/edtLat"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="Latitude Titik Awal"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textColor="@color/textcolor"
+            app:layout_constraintBottom_toTopOf="@+id/edtLong"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_myloc"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/et_place"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:ems="10"
+            android:hint="Destinasi Anda"
+            android:textAlignment="center"
+            android:textColor="@color/textcolor"
+            app:layout_constraintBottom_toTopOf="@+id/bt_submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtLong"
+            app:layout_constraintVertical_bias="0.877" />
+
+        <EditText
+            android:id="@+id/etlongAkhir"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            android:ems="10"
+            android:hint="Longitude Titik Akhir"
+            android:textAlignment="center"
+            android:textColor="@color/textcolor"
+            app:layout_constraintBottom_toBottomOf="@+id/btnKirim"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_submit"
+            app:layout_constraintVertical_bias="0.059" />
+
+        <EditText
+            android:id="@+id/etlatAkhir"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Latitude Titik Akhir"
+            android:textAlignment="center"
+            android:textColor="@color/textcolor"
+            app:layout_constraintBottom_toTopOf="@+id/etlongAkhir"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_submit" />
+
+        <EditText
+            android:id="@+id/edtLong"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:ems="10"
+            android:hint="Longitude Titik Awal"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            android:textColor="@color/textcolor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_myloc" />
+
+        <TextView
+            android:id="@+id/tv_mylocnow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/locationButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtLong" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
